@@ -2,5 +2,5 @@
 
 <div>
     <p>Enter a number:</p>
-    <input type="number" bind="Model.Number"/>
+    <input type="number" oninput=@( (e)=>Model.Number= int.TryParse(e.Value.ToString(), out int value) ? value : Model.Number )/>
 </div>
